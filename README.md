@@ -213,9 +213,93 @@ We can pass arbitrary data to functions using parameters (also called function a
 👉Return  
 A function can return a value back into the calling code as the result.
 
-👉A function with an empty return or without it returns undefined
+👉 A function with an empty return or without it returns undefined
 If a function does not return a value, it is the same as if it returns undefined
+
 -------------------------------------------------------------------------------------------------------------
+
+✅
+
+another syntax for creating a function that is called a Function Expression.
+
+let sayHi = function() {
+  alert( "Hello" );
+};
+
+✅callback fun
+function ask(question, yes, no){}
+The arguments showOk and showCancel of ask are called callback functions or just callbacks.
+
+✅Function Declaration
+The Function Declaration sayHi is created when JavaScript is preparing to start the script and is visible everywhere in it.
+
+✅Function Expressions
+Function Expressions are created when the execution reaches them. That would happen only in the line (*). Too late.
+
+✅arrow functions(same work as function expressions)
+let func = (arg1, arg2, ..., argN) => expression
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+✅'use strict'
+
+To fully enable all features of modern JavaScript, we should start scripts with "use strict".
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅string
+
+
+Single and double quotes are essentially the same.
+Backticks, however, allow us to embed any expression into the string, by wrapping it in ${…}.
+
+👉str.length
+is a numeric property, not a function
+
+👉Accesing Char
+[pos]
+str.charAt(pos)
+
+if no character is found, [] returns undefined, and charAt returns an empty string.
+
+------------------------------------------------------------------------------------------------------------------------------
+✅task prob solv
+
+👉arr.sort() 
+👉arr.sort( (a, b) => a - b );
+
+here sort method use quick sort or trim sort internally.
+here it only compare string value which cause problem like => '2' > '12' //true
+so we compare them like  (a, b) => a - b which compare a,b in numerical way and give for swapping.
+
+👉you can make compare function on your own when you have to compare from object values like
+
+function compare( a, b ) {
+    if ( a.name < b.name ){
+      return -1;
+    }
+    if ( a.name > b.name ){
+      return 1;
+    }
+    return 0;
+  }
+  
+  👉when we use array and make another array from it it make refference of it like : let arr1 = arr;
+  so modifing arr1 cause modifing both the arrays.
+  
+  so for making copy of same array we can use like :
+  
+  let arr1 = new Array();
+  arr1 = arr.slice(0,arr.length);
+  
+  this make new array not just take refference of it.
+  
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
