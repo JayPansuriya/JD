@@ -290,8 +290,7 @@ function compare( a, b ) {
   
   so for making copy of same array we can use like :
   
-  let arr1 = new Array();
-  arr1 = arr.slice(0,arr.length);
+  let newArray = oldArray.slice();
   
   this make new array not just take refference of it.
   
