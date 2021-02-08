@@ -118,8 +118,104 @@ parseInt('0xff', 16); // 255
 
 ----------------------------------------------------------------------------------------------
 
+✅Comparisons
 
 
+let a = 0;
+alert( Boolean(a) ); // false
+
+👉let b = "0";
+alert( Boolean(b) ); // true
+
+alert(a == b); // true!
+
+
+👉A strict equality operator === checks the equality without type conversion.
+
+👉alert( null == undefined ); // true
+
+---------------------------------------------------------------------------------------------
+
+✅ if else and ? :
+
+let result = condition ? value1 : value2;
+
+---------------------------------------------------------------------------------------------
+
+✅ || 
+
+ If any of its arguments are true, it returns true, otherwise it returns false.
+ 
+ 
+ ✅ &&
+ The AND && operator does the following:
+Evaluates operands from left to right.
+For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.
+If all operands have been evaluated (i.e. all were truthy), returns the last operand.
+ 
+✅ !
+The operator accepts a single argument and does the following:
+Converts the operand to boolean type: true/false.
+Returns the inverse value.
+
+✅Nullish coalescing operator '??'
+?? returns the first argument if it’s not null/undefined. Otherwise, the second one.
+
+-------------------------------------------------------------------------------------------------
+
+✅while
+
+✅do while
+
+✅for
+
+✅break
+
+✅continue
+
+✅Labels for break/continue
+
+------------------------------------------------------------------------------------------------
+
+✅switch
+
+A switch statement can replace multiple if checks.
+It gives a more descriptive way to compare a value with multiple variants.
+
+use === for comparision
+
+--------------------------------------------------------------------------
+
+✅functions
+
+Quite often we need to perform a similar action in many places of the script.
+
+They allow the code to be called many times without repetition.
+
+👉function name(parameters) {
+  ...body...
+}
+
+👉Local variables
+A variable declared inside a function is only visible inside that function.
+
+👉Outer variables
+A function can access an outer variable as well,.
+
+👉Global variables
+Variables declared outside of any function, such as the outer userName in the code above, are called global.
+
+👉Parameters
+We can pass arbitrary data to functions using parameters (also called function arguments) .
+  👉Default values
+   If a parameter is not provided, then its value becomes undefined
+   
+👉Return  
+A function can return a value back into the calling code as the result.
+
+👉A function with an empty return or without it returns undefined
+If a function does not return a value, it is the same as if it returns undefined
+-------------------------------------------------------------------------------------------------------------
 
 
 
