@@ -258,10 +258,56 @@ Backticks, however, allow us to embed any expression into the string, by wrappin
 is a numeric property, not a function
 
 👉Accesing Char
-[pos]
+str[pos]
 str.charAt(pos)
 
 if no character is found, [] returns undefined, and charAt returns an empty string.
+
+👉for..of
+for (let char of "Hello"){
+alert(char)
+}
+
+👉Strings are immutable
+Strings can’t be changed in JavaScript. It is impossible to change a character.
+we have to create a whole new string and assign it to str instead of the old one.
+
+👉Changing case of string
+Methods toLowerCase() and toUpperCase() change the case.
+
+👉Searching for a substring
+
+👉str.indexOf(substr, pos)
+   return -1 if substring not found.
+      👉str.lastIndexOf(substr, position)
+        it return substring pos from last.
+        
+👉bitwise NOT ~ operator
+   for 32-bit integers ~n equals -(n+1).
+   ~n is zero only if n == -1 .
+        
+👉includes, startsWith, endsWith
+      str.includes(substr, pos)
+      str.startsWith(substr)
+      str.endssWith(substr)
+      
+ 👉Getting a substring
+       method	                          selects…	                          negatives
+slice(start, end)	           from start to end (not including end)	    allows negatives
+substring(start, end)	       between start and end	                    negative values mean 0
+substr(start, length)	       from start get length characters	         allows negative start
+  
+👉Comparing strings
+
+All strings are encoded using UTF-16. That is: each character has a corresponding numeric code.The characters are compared by their numeric code. 
+
+        👉String.fromCodePoint(code)
+            Special methods that allow to get the character for the code and back.
+        👉String.fromCodePoint(code)
+            Creates a character by its numeric code.
+  
+ 👉str1.localeCompare('str2') )
+       setup additional rules like case sensitivity or should "a" and "á" be treated as the same etc.
 
 ------------------------------------------------------------------------------------------------------------------------------
 ✅task prob solv
@@ -294,6 +340,9 @@ function compare( a, b ) {
   
   this make new array not just take refference of it.
   
+  we have to do deep copy of array of objects:
+  
+  var newArray = JSON.parse(JSON.stringify(oldArray));
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
