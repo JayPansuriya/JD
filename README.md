@@ -346,6 +346,58 @@ function compare( a, b ) {
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+✅Arrays
+
+👉ordered collection
+
+let arr = new Array();
+let arr = [];
+
+push appends an element to the end.
+unshift Add the element to the beginning of the array.
+pop Extracts the last element of the array and returns it.
+shift get an element from the beginning, advancing the queue, so that the 2nd element becomes the 1st.
+
+👉The call fruits.push(...) is equal to fruits[fruits.length] = ....
+
+if we compare arrays with ==, they are never the same, unless we compare two variables that reference exactly the same array.
+
+
+👉splice 
+The arr.splice method is a swiss army knife for arrays. It can do everything: insert, remove and replace elements.
+arr.splice(start[, deleteCount, elem1, ..., elemN])
+
+👉slice 
+arr.slice([start], [end])
+
+👉concat
+arr.concat(arg1, arg2...)
+
+👉forEach
+arr.forEach(function(item, index, array) {
+  // ... do something with item
+});
+
+👉
+arr.indexOf(item, from) – looks for item starting from index from, and returns the index where it was found, otherwise -1.
+arr.lastIndexOf(item, from) – same, but looks for from right to left.
+arr.includes(item, from) – looks for item starting from index from, returns true if found.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
