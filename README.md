@@ -378,21 +378,42 @@ arr.forEach(function(item, index, array) {
   // ... do something with item
 });
 
-👉
+👉searching
 arr.indexOf(item, from) – looks for item starting from index from, and returns the index where it was found, otherwise -1.
 arr.lastIndexOf(item, from) – same, but looks for from right to left.
 arr.includes(item, from) – looks for item starting from index from, returns true if found.
 
+👉find and findIndex
+let result = arr.find(function(item, index, array) {
+  // if true is returned, item is returned and iteration is stopped
+  // for falsy scenario returns undefined
+});
+
+👉filter
+filter returns an array of all matching elements.
+let results = arr.filter(function(item, index, array) {
+  // if true item is pushed to results and the iteration continues
+  // returns empty array if nothing found
+});
+
+👉map
+let result = arr.map(function(item, index, array) {
+  // returns the new value instead of item
+});
+
+👉reverse
+arr.reverse();
 
 
+👉split and join
+let a = arr.split(' ');
+let a = arr.join(' ');
 
-
-
-
-
-
-
-
+👉reduce
+They are used to calculate a single value based on the array.
+let value = arr.reduce(function(accumulator, item, index, array) {
+  // ...
+}, [initial]);
 
 
 
