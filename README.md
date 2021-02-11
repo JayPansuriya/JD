@@ -415,10 +415,63 @@ let value = arr.reduce(function(accumulator, item, index, array) {
   // ...
 }, [initial]);
 
+---------------------------------------------------------------------------------------------
+
+✅Object
+
+👉A property is a “key: value” pair.
+
+let user = new Object(); // "object constructor" syntax
+let user = {};  // "object literal" syntax
+
+Object.keys(obj) – returns an array of keys.
+Object.values(obj) – returns an array of values.
+Object.entries(obj) – returns an array of [key, value] pairs.
+
+
+👉access element of object with key
+obj1.name // jay
+obj1[name] //jay
+
+
+👉Computed properties
+We can use square brackets in an object literal, when creating an object. 
+let fruit = prompt("Which fruit to buy?", "apple");
+let bag = {
+  [fruit]: 5, 
+};
+alert( bag.apple ); // 5 if fruit="apple"
+
+
+👉There are no limitations on property names. They can be any strings 
+or symbols (a special type for identifiers(for ,let,etc...), to be covered later).
+
+
+👉One of the fundamental differences of objects versus primitives is that
+objects are stored and copied “by reference”, whereas primitive 
+values: strings, numbers, booleans, etc – are always copied “as a whole value”.v
+
+👉clone Object
+let clone = {}; // the new empty object
+// let's copy all user properties into it
+for (let key in user) {
+  clone[key] = user[key];
+}
+
+👉Merging
+Object.assign(dest, [src1, src2, src3...])
+
+cloning an object, e.g. using the spread operator clone = {...user}
 
 
 
+---------------------------------------------------------------------------------------------
 
+✅Hoisting
+Hoisting is a JavaScript mechanism where variables and function declarations 
+are moved to the top of their scope before code execution. Inevitably, this means
+that no matter where functions and variables are declared, they are moved to the top 
+of their scope regardless of whether their scope is global or local.
 
 
 
