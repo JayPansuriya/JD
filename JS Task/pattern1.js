@@ -1,33 +1,38 @@
-var num = 1;
+var text = 65;
 var n = parseInt(prompt("enter n: ", "5"));
 
 let str = '';
-let str1 = '';
-let str2 = '';
+
 //upper triangle
-for (let i = 0; i < n; i++) {
+for (let i = 0; i < n + 1; i++) {
 
 
     for (let j = 0; j < n - i; j++) {
         str = str.concat(" ");
     }
     for (let j = 0; j < i; j++) {
-        str = str.concat("*" + " ");
+        str = str.concat(String.fromCharCode(text) + " ");
+
+        text = text + 1;
     }
 
     str = str.concat("\n");
 }
 //lower triangle
-for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
+text = text - n - 1;
 
-        if (i > j) {
-            str = str.concat(" ");
-        } else {
-            str = str.concat("*" + " ");
-        }
+for (let i = 1; i < n; i++) {
+
+    for (let j = 0; j < i; j++) {
+        str = str.concat(" ");
+    }
+    for (let j = 0; j < n - i; j++) {
+        str = str.concat(String.fromCharCode(text) + " ");
+
+        text = text - 1;
     }
     str = str.concat("\n");
-
 }
+
+
 console.log(str);
